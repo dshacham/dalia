@@ -1,0 +1,86 @@
+@import 'App';
+
+.nav {
+    display: flex;
+    img {
+        position: fixed;
+        z-index: 102;
+        left: 2rem;
+        top: 2rem;
+        width: 6%;
+    }
+    .navbar {
+        position: fixed;
+        top: 2rem;
+        z-index: 101;
+        background-color: $turquoise;
+        width: 100%;
+        box-shadow: 1px 1px 5px rgba(34, 47, 66, 0.651);
+    
+        .nav-items {
+            margin-right: 3rem;
+            display: flex;
+            text-align: center;
+            width: 70%;
+        }
+    
+        li {
+            padding: 2rem;
+            margin-right: -4.1rem;
+            font-size: 1rem;
+            height: 100%;
+            width: 100%;
+            cursor: pointer;
+            border: hidden;
+            background-color: $turquoise;
+        }
+        #contact {
+            clip-path: polygon(25% 0%, 100% 0%, 75% 100%, 0% 100%);
+            background-color: rgb(24, 190, 223);
+        }
+        #contact:hover {
+            box-shadow: inset 1px 1px 5px rgb(24, 230, 223);
+        }
+
+        #mezuzot {
+            clip-path: polygon(25% 0%, 100% 0%, 75% 100%, 0% 100%);
+            background-color: rgb(24, 180, 223);
+        }
+        #mezuzot:hover {
+            box-shadow: inset 1px 1px 5px rgb(24, 220, 223);
+        }
+
+        #purification {
+            clip-path: polygon(25% 0%, 100% 0%, 75% 100%, 0% 100%);
+            background-color: rgb(24, 170, 223);
+        }
+        #purification:hover {
+            box-shadow: inset 1px 1px 5px rgb(24, 210, 223);
+        }
+
+        #therapy {
+            clip-path: polygon(25% 0%, 100% 0%, 75% 100%, 0% 100%);
+            background-color: rgb(24, 160, 223);
+        }
+        #therapy:hover {
+            box-shadow: inset 1px 1px 5px rgb(24, 200, 223);
+        }
+
+        #home {
+            clip-path: polygon(25% 0%, 100% 0%, 100% 100%, 0% 100%);
+            background-color: rgb(24, 150, 223);
+        }
+        #home:hover {
+            box-shadow: inset 1px 1px 5px rgb(24, 200, 223);
+        }
+    
+        a {
+            color: $indigo;
+            font-size: 1.2rem;
+        }
+    
+        .selected {
+            background-color: rgb(0, 175, 219);
+        }
+    }
+}
