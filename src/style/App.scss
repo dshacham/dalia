@@ -1,6 +1,8 @@
 /* COLORS */
 $light-blue: rgb(214, 230, 255);
+$mid-light-blue: rgb(135, 183, 255);
 $turquoise: rgb(24, 199, 223);
+$dark-blue: rgb(0, 13, 87);
 $indigo: rgb(0, 21, 139);
 
 /* FONTS */
@@ -8,17 +10,29 @@ $indigo: rgb(0, 21, 139);
 // font-family: 'Rubik', sans-serif;
 // font-family: 'Amatic SC', cursive;
 
+/* TILTED EDGES */
+$tilted: polygon(25% 0%, 100% 0%, 75% 100%, 0% 100%);
+
+/* BASICS */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    scroll-behavior: smooth;
     list-style: none;
     direction: rtl;
+}
+
+html {
+    height: 100%;
 }
 
 body {
     font-family: 'Rubik', sans-serif;
     background-color: $light-blue;
+    position: relative;
+    min-height: 100%;
+    padding-bottom: 6rem;
 }
 
 a {

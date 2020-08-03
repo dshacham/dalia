@@ -4,6 +4,8 @@ import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 import Home from './Home';
 import Context from './Context';
 import NavBar from './NavBar';
+import SlideInNav from './SlideInNav';
+import Footer from './Footer';
 
 function App() {
   const [navClass, setNavClass] = useState('/');
@@ -24,10 +26,15 @@ function App() {
     <div className="App">
       <Context.Provider value={{ navClass, setNavClass, winWidth, setWinWidth }}>
         <Router>
-          <NavBar />
+          {winWidth === 'desktop' ?
+            <NavBar />
+            :
+            <SlideInNav />
+          }
           <Switch>
             <Route path="/" exact component={Home} />
           </Switch>
+          <Footer />
         </Router>
       </Context.Provider>
     </div>

@@ -1,0 +1,100 @@
+@import 'App';
+
+.slide-in-nav {
+    position: fixed;
+    top: 0;
+    z-index: 101;
+    background-color: $turquoise;
+    color: $indigo;
+    width: 100%;
+
+    .top-nav {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: 100%;
+
+        .hamburger {
+            margin: 0.5rem;
+            width: 8vw;
+            height: 6vh;
+            animation-duration: 0.5s;
+            cursor: pointer;
+        }
+
+        .logo {
+            cursor: pointer;
+            color: $indigo;
+            width: 40%;
+            transform: translateX(-130%);
+        }
+    }
+    
+    .slide-in {
+        width: 30%;
+    
+        .ul-slide {
+            position: absolute;
+            transform: translateX(200%);
+            border-bottom-left-radius: 0.3rem;
+            
+            background-color: $turquoise;
+            animation-duration: 0.5s;
+            width: 50%;
+        }
+    
+        .slide-in-anim {
+            animation: slide-in 0.5s forwards;
+        }
+    
+        .slide-out-anim {
+            animation: slide-out 0.5s forwards;
+        }
+    
+        @keyframes slide-in {
+            100% { transform: translateX(0%); }
+        }
+    
+        @keyframes slide-out {
+            0% { transform: translateX(0%); }
+            100% { transform: translateX(200%); }
+        }
+    
+        ul, ul a {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            color: $indigo;
+            text-align: center;
+            font-size: 1.2rem;
+            font-weight: bold;
+        }
+
+    
+        ul a:hover {
+            color: rgb(0, 0, 255);
+        }
+    
+        li {
+            padding: 2rem 0;
+            font-size: 1rem;
+            width: 100%;
+        }
+
+        #contact {
+            background-color: rgb(24, 150, 223);
+        }
+        #mezuzot {
+            background-color: rgb(24, 160, 223);
+        }
+        #purification {
+            background-color: rgb(24, 170, 223);
+        }
+        #therapy {
+            background-color: rgb(24, 180, 223);
+        }
+        #home {  
+            background-color: rgb(24, 190, 223);
+        }
+    }
+}
