@@ -41,7 +41,7 @@
         .ul-slide {
             position: absolute;
             z-index: 102;
-            transform: translateX(-100%);
+            transform: translateX(-101%);
             border-bottom-right-radius: 0.3rem;
             background-color: $turquoise;
             animation-duration: 0.5s;
@@ -62,7 +62,7 @@
     
         @keyframes slide-out {
             0% { transform: translateX(0%); }
-            100% { transform: translateX(-100%); }
+            100% { transform: translateX(-101%); }
         }
     
         ul, ul a {
