@@ -14,6 +14,7 @@
         justify-content: space-between;
         align-items: center;
         direction: ltr;
+        box-shadow: 1px 1px 5px rgba(34, 47, 66, 0.651);
 
         .hamburger {
             position: absolute;
@@ -46,6 +47,7 @@
             background-color: $turquoise;
             animation-duration: 0.5s;
             width: 50%;
+            box-shadow: 2px 3px 2px rgba(34, 47, 66, 0.425);
         }
     
         .slide-in-anim {
