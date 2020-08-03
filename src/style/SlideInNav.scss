@@ -7,14 +7,17 @@
     background-color: $turquoise;
     color: $indigo;
     width: 100%;
+    direction: ltr;
 
     .top-nav {
         display: flex;
         justify-content: space-between;
         align-items: center;
-        width: 100%;
+        direction: ltr;
 
         .hamburger {
+            position: absolute;
+            left: 0;
             margin: 0.5rem;
             width: 8vw;
             height: 6vh;
@@ -26,18 +29,20 @@
             cursor: pointer;
             color: $indigo;
             width: 40%;
-            transform: translateX(-130%);
+            margin-right: 0.5rem;
+            
         }
     }
     
     .slide-in {
         width: 30%;
-    
+        direction: ltr;
+        
         .ul-slide {
             position: absolute;
-            transform: translateX(200%);
-            border-bottom-left-radius: 0.3rem;
-            
+            z-index: 102;
+            transform: translateX(-100%);
+            border-bottom-right-radius: 0.3rem;
             background-color: $turquoise;
             animation-duration: 0.5s;
             width: 50%;
@@ -57,7 +62,7 @@
     
         @keyframes slide-out {
             0% { transform: translateX(0%); }
-            100% { transform: translateX(200%); }
+            100% { transform: translateX(-100%); }
         }
     
         ul, ul a {

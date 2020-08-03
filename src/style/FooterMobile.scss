@@ -1,0 +1,39 @@
+@import 'App';
+
+.footer {
+    position: absolute;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    background-color: $indigo;
+    box-shadow: inset 1px 1px 5px $mid-light-blue;
+    color: $mid-light-blue;
+    padding: 1rem 0;
+    
+    ul {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 0;
+        
+        li {
+            margin: 0 5.5vw;
+            flex-direction: column;
+            cursor: pointer;
+            align-items: center;
+        
+            a {
+                color: $mid-light-blue;
+            }
+            .icon {
+                font-size: 2.5rem;
+                width: 100%;
+            }
+            .icon-desc {
+                margin-top: 0.2rem;
+                font-weight: 300;
+                text-align: center;
+            }
+        }
+    }
+}

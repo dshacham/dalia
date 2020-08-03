@@ -3,9 +3,9 @@ import { Link } from 'react-router-dom';
 import '../style/Home.scss';
 
 const Home = () => {
-    useEffect(() => {
-        window.scrollTo(0, 0);
-    }, []);
+    // useEffect(() => {
+    //     window.scrollTo(0, 0);
+    // }, []);
 
     return (
         <div className="home">

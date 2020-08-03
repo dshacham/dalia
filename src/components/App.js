@@ -1,18 +1,16 @@
-
-import React, { useState, useEffect, useContext } from 'react';
+import React, { useState, useEffect } from 'react';
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 import Home from './Home';
-import Context from './Context';
 import NavBar from './NavBar';
 import SlideInNav from './SlideInNav';
 import Footer from './Footer';
+import FooterMobile from './FooterMobile';
 
 function App() {
-  const [navClass, setNavClass] = useState('/');
   const [winWidth, setWinWidth] = useState('');
 
   useEffect(() => {
-    window.scrollTo(0, 0)
+    window.scrollTo(0, 0);
   }, []);
 
   useEffect(() => {
@@ -24,19 +22,21 @@ function App() {
 
   return (
     <div className="App">
-      <Context.Provider value={{ navClass, setNavClass, winWidth, setWinWidth }}>
-        <Router>
-          {winWidth === 'desktop' ?
-            <NavBar />
-            :
-            <SlideInNav />
-          }
-          <Switch>
-            <Route path="/" exact component={Home} />
-          </Switch>
+      <Router>
+        {winWidth === 'desktop' ?
+          <NavBar />
+          :
+          <SlideInNav />
+        }
+        <Switch>
+          <Route path="/" exact component={Home} />
+        </Switch>
+        {winWidth === 'desktop' ?
           <Footer />
-        </Router>
-      </Context.Provider>
+          :
+          <FooterMobile />
+        }
+      </Router>
     </div>
   );
 }

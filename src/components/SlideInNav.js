@@ -1,15 +1,19 @@
 import React, { useState } from 'react';
-import { NavLink } from 'react-router-dom';
+import { NavLink, Link } from 'react-router-dom';
 import HamburgerMenu from 'react-hamburger-menu';
 import '../style/SlideInNav.scss';
 
 const SlideInNav = () => {
-    const [isMenuOpen, setIsMenuOpen] = useState(false);
+    const [isMenuOpen, setIsMenuOpen] = useState(false); // hamburger
     const [isMenuClicked, setIsMenuClicked] = useState(false);
+    const [isMenuClosed, setIsMenuClosed] = useState(true);
+    const [initClosed, setInitClosed] = useState(true);
 
     const handleMenuClick = () => {
         setIsMenuOpen(!isMenuOpen);
-        setIsMenuClicked(true);
+        setIsMenuClicked(!isMenuClicked);
+        setIsMenuClosed(!isMenuClosed);
+        setInitClosed(false);
     };
 
     return (
@@ -22,12 +26,13 @@ const SlideInNav = () => {
                     color='#00158b'
                     strokeWidth={3}
                 />
-                <NavLink to="/"><img src="../../assets/images/logo.png" alt="logo" className="logo" /></NavLink>
+                <Link to="/"><img src="../../assets/images/logo.png" alt="logo" className="logo" /></Link>
             </div>
             <nav className="slide-in">
-                {
+                {initClosed ? null
+                    :
                     isMenuClicked ?
-                        <ul className={isMenuOpen === false ? "ul-slide slide-out-anim" : "ul-slide slide-in-anim"}>
+                        <ul className={isMenuOpen ? "ul-slide slide-in-anim" : null}>
                             <li id="home">
                                 <NavLink to="/">ראשי</NavLink>
                             </li>
@@ -45,7 +50,23 @@ const SlideInNav = () => {
                             </li>
                         </ul>
                         :
-                        null
+                        <ul className={isMenuClosed ? "ul-slide slide-out-anim" : null}>
+                            <li id="home">
+                                <NavLink to="/">ראשי</NavLink>
+                            </li>
+                            <li id="therapy">
+                                <NavLink to="therapy">טיפולים</NavLink>
+                            </li>
+                            <li id="purification">
+                                <NavLink to="purification">טיהור בית</NavLink>
+                            </li>
+                            <li id="mezuzot">
+                                <NavLink to="mezuzot">בתי מזוזה</NavLink>
+                            </li>
+                            <li id="contact">
+                                <NavLink to="contact">יצירת קשר</NavLink>
+                            </li>
+                        </ul>
                 }
             </nav>
         </div>

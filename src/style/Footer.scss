@@ -1,10 +1,10 @@
 @import 'App';
 
-.footer {
+.footer-desk {
     position: absolute;
     right: 0;
-    bottom: 0;
     left: 0;
+    bottom: 0;
     background-color: $indigo;
     box-shadow: inset 1px 1px 5px $mid-light-blue;
     color: $mid-light-blue;
@@ -12,13 +12,30 @@
     justify-content: center;
     padding: 1rem;
 
-    ul {
+    .footer-section-desk {
         border-left: 1px solid $mid-light-blue;
         border-left-style: dotted;
         text-align: center;
-        padding: 0 5rem;
+        padding: 0 8vw;
+        display: flex;
+        flex-direction: column;
+
+        li:first-of-type {
+            font-size: 0.8rem;
+            font-weight: bold;
+        }
+        li {
+            font-size: 0.7rem;
+            margin: 0.25rem 0;
+        }
+        a {
+            color: $mid-light-blue;
+        }
+        .icon-desk {
+            font-size: 1.25rem;
+        }
     }
-    ul:last-of-type {
+    .footer-section-desk:last-of-type {
         border-left: hidden;
         li {
             display: flex;
@@ -27,25 +44,12 @@
                 margin-right: 0.5rem;
             }
         }
-        .section-title {
+        .section-contact-desk {
             justify-content: center;
         }
     }
 
-    li:first-of-type {
-        font-size: 0.8rem;
-        font-weight: bold;
-    }
-    li {
-        font-size: 0.7rem;
-        margin: 0.5rem;
-    }
-    a {
-        color: $mid-light-blue;
-    }
-    .icon {
-        font-size: 1.25rem;
-    }
+    
 }
 // display: flex;
 // justify-content: space-around;

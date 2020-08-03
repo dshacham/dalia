@@ -1,5 +1,5 @@
 import React from 'react';
-import { NavLink } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 import '../style/Footer.scss';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faEnvelope, faEnvelopeOpenText } from '@fortawesome/free-solid-svg-icons';
@@ -11,44 +11,44 @@ const Footer = () => {
     };
 
     return (
-        <div className="footer">
-            <ul className="footer-section">
-                <li className="section-title">
-                    <NavLink to="therapy">טיפולים</NavLink>
+        <div className="footer-desk">
+            <ul className="footer-section-desk">
+                <li className="section-title-desk">
+                    <Link to="therapy">טיפולים</Link>
                 </li>
-                <li><NavLink to="#">אקסס בארס</NavLink></li>
-                <li><NavLink to="#">תטא הילינג</NavLink></li>
-                <li><NavLink to="#">קלפי טארוט</NavLink></li>
-                <li><NavLink to="#">פרחי באך</NavLink></li>
-                <li><NavLink to="#">אבני קריסטל</NavLink></li>
+                <li><Link to="#">אקסס בארס</Link></li>
+                <li><Link to="#">תטא הילינג</Link></li>
+                <li><Link to="#">קלפי טארוט</Link></li>
+                <li><Link to="#">פרחי באך</Link></li>
+                <li><Link to="#">אבני קריסטל</Link></li>
             </ul>
-            <ul className="footer-section">
-                <li className="section-title">
-                    <NavLink to="purification">טיהור בית</NavLink>
+            <ul className="footer-section-desk">
+                <li className="section-title-desk">
+                    <Link to="purification">טיהור בית</Link>
                 </li>
-                <li><NavLink to="#">לורם אימפוזום</NavLink></li>
+                <li><Link to="#">מידע</Link></li>
             </ul>
-            <ul className="footer-section">
-                <li className="section-title">
-                    <NavLink to="mezuzot">בתי מזוזה</NavLink>
+            <ul className="footer-section-desk">
+                <li className="section-title-desk">
+                    <Link to="mezuzot">בתי מזוזה</Link>
                 </li>
-                <li><NavLink to="#">פרטים</NavLink></li>
-                <li><NavLink to="#">תמונות</NavLink></li>
+                <li><Link to="#">פרטים</Link></li>
+                <li><Link to="#">תמונות</Link></li>
             </ul>
-            <ul className="footer-section">
-                <li className="section-title">
-                    <NavLink to="contact">יצירת קשר</NavLink>
+            <ul className="footer-section-desk">
+                <li className="section-contact-desk">
+                    <Link to="contact">יצירת קשר</Link>
                 </li>
                 <li><a href="https://www.facebook.com/dalia.shacham" target="_blank">
-                    <FontAwesomeIcon className="icon" title="פייסבוק" icon={faFacebookSquare} />
+                    <FontAwesomeIcon className="icon-desk" title="פייסבוק" icon={faFacebookSquare} />
                 </a><p>פייסבוק</p></li>
                 <li><a href="mailto: dool52@walla.com">
-                    <FontAwesomeIcon className="icon" title="אימייל" icon={faEnvelope} />
+                    <FontAwesomeIcon className="icon-desk" title="אימייל" icon={faEnvelope} />
                 </a><p>אימייל</p></li>
                 <li>
-                    <NavLink to="contact">
-                        <FontAwesomeIcon className="icon" title="טופס שליחת הודעה" icon={faEnvelopeOpenText} />
-                    </NavLink>
+                    <Link to="contact">
+                        <FontAwesomeIcon className="icon-desk" title="טופס שליחת הודעה" icon={faEnvelopeOpenText} />
+                    </Link>
                     <p>הודעה</p>
                 </li>
             </ul>
