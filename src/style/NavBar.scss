@@ -1,22 +1,19 @@
-@import 'App';
+@import 'index';
 
 .nav {
     display: flex;
 
     img {
         position: absolute;
-        z-index: 102;
+        z-index: 1;
         left: 2rem;
         top: 1.5rem;
         width: 6rem;
-        // transform: scale(1.5);
-        // border-radius: 50%;
     }
 
     .navbar {
         position: absolute;
         top: 1.5rem;
-        z-index: 101;
         background-color: $turquoise;
         width: 100%;
         box-shadow: 1px 1px 5px rgba(34, 47, 66, 0.651);
@@ -39,6 +36,8 @@
             background-color: $turquoise;
             position: relative;
             display: inline-block;
+
+            
         }
         li:first-of-type {
             margin-right: -6.2vw;
@@ -48,14 +47,17 @@
             color: $indigo;
             font-size: 1rem;
         }
+        .selected {
+            font-weight: bolder;
+        }
 
-        #home, #therapy, #purification, #mezuzot, #contact {
+        #home, #therapy, #tihur, #mezuzot, #contact {
             clip-path: $tilted;
             transition: all .3s ease-in-out;
         }
-        #home:hover, #therapy:hover, #purification:hover, #mezuzot:hover, #contact:hover {
+        #home:hover, #therapy:hover, #tihur:hover, #mezuzot:hover, #contact:hover {
             transform: scale(1.08);
-            z-index: 200;
+            z-index: 2;
         }
         #home {
             clip-path: polygon(25% 0%, 100% 0%, 100% 100%, 0% 100%);
@@ -64,7 +66,7 @@
         #therapy {
             background-color: rgb(24, 160, 223);
         }
-        #purification {
+        #tihur {
             background-color: rgb(24, 170, 223);
         }
         #mezuzot {
@@ -74,4 +76,6 @@
             background-color: rgb(24, 190, 223);
         }
     }
+
+    
 }

@@ -1,0 +1,80 @@
+@import 'index';
+
+.mezuzot {
+    display: flex;
+    flex-wrap: wrap;
+    flex: 1 0 auto;
+    justify-content: center;
+    color: $indigo;
+    margin: 8rem 2rem;
+
+    .ul-mezuzot {
+        margin: 2rem 1rem;
+        padding: 0.5rem;
+        background-color: rgb(204, 224, 255);
+        width: 17rem;
+        height: auto;
+        box-shadow: 1px 1px 5px rgba(34, 47, 66, 0.363);
+        border-radius: 0.2rem;
+        .mezuza-img {
+            border-radius: 0.2rem;
+            width: 100%;
+        }
+
+        .mezuza-name {
+            margin: 0.5rem 0 0.2rem;
+        }
+
+        .desc, .mezuza-img {
+            cursor: pointer;
+            font-weight: bold;
+        }
+
+        .desc-img {
+            display: none;
+            position: fixed;
+            z-index: 2;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 4, 24, 0.9);
+
+            .desc-content, .mezuza-content {
+                display: block;
+                margin: 12rem auto;
+            }
+            .mezuza-content {
+                margin: 8rem auto;
+            }
+
+            .close {
+                position: absolute;
+                top: 15px;
+                right: 35px;
+                color: #f1f1f1;
+                font-size: 40px;
+                font-weight: bold;
+                animation: zoom 0.6s backwards;
+            }
+
+            .close:hover,
+            .close:focus {
+                color: rgb(179, 209, 255);
+                text-decoration: none;
+                cursor: pointer;
+            }
+        }
+
+        .show {
+                display: block;
+                animation-name: zoom;
+                animation-duration: 0.6s;
+            }
+
+        @keyframes zoom {
+            from {transform:scale(0)} 
+            to {transform:scale(1)}
+        }
+    }
+}

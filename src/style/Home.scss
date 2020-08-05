@@ -1,4 +1,4 @@
-@import 'App';
+@import 'index';
 
 .home {
     margin: 10rem auto;
@@ -70,4 +70,84 @@
         }
     }
     
+}
+
+@media screen and (max-width: 500px) {
+    .home {
+        margin: 6rem auto;
+        width: 90%;
+        color: $dark-blue;
+        flex-direction: column;
+
+        .about {
+            width: 100%;
+        }
+
+        .boxes {
+            width: 100%;
+            margin: 2rem auto;
+
+            .therapy-card {
+                margin: 1rem 0;
+                min-height: 100%;
+
+                .desc {
+                    padding: 0 2rem 2rem;
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 600px) and (min-width: 501px) {
+    .home {
+        margin: 6rem auto;
+        width: 90%;
+        color: $dark-blue;
+        flex-direction: column;
+
+        .about {
+            width: 100%;
+        }
+
+        .boxes {
+            width: 70%;
+            margin: 2rem auto;
+
+            .therapy-card {
+                margin: 1rem 0;
+                min-height: 100%;
+
+                .desc {
+                    padding: 0 2rem 2rem;
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 768px) and (min-width: 601px) {
+    .home {
+        margin: 6rem auto;
+        width: 90%;
+        color: $dark-blue;
+        flex-direction: column;
+
+        .about {
+            width: 100%;
+        }
+
+        .boxes {
+            width: 100%;
+            flex-direction: row;
+            // flex-wrap: wrap;
+            // flex: 1 0 auto;
+            margin: 2rem auto;
+
+            .therapy-card {
+                margin: 0 0.5rem;
+                min-height: 100%;
+            }
+        }
+    }
 }

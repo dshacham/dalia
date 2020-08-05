@@ -5,12 +5,21 @@ import NavBar from './NavBar';
 import SlideInNav from './SlideInNav';
 import Footer from './Footer';
 import FooterMobile from './FooterMobile';
+import Context from './Context';
+import Therapy from './Therapy';
+import Mezuzot from './Mezuzot';
 
 function App() {
   const [winWidth, setWinWidth] = useState('');
+  const [navClass, setNavClass] = useState('/');
+  const [therapyClass, setTherapyClass] = useState('');
 
   useEffect(() => {
     window.scrollTo(0, 0);
+  }, []);
+
+  useEffect(() => {
+    setNavClass(window.location.pathname);
   }, []);
 
   useEffect(() => {
@@ -22,21 +31,25 @@ function App() {
 
   return (
     <div className="App">
-      <Router>
-        {winWidth === 'desktop' ?
-          <NavBar />
-          :
-          <SlideInNav />
-        }
-        <Switch>
-          <Route path="/" exact component={Home} />
-        </Switch>
-        {winWidth === 'desktop' ?
-          <Footer />
-          :
-          <FooterMobile />
-        }
-      </Router>
+      <Context.Provider value={{ navClass, setNavClass, therapyClass, setTherapyClass }}>
+        <Router>
+          {winWidth === 'desktop' ?
+            <NavBar />
+            :
+            <SlideInNav />
+          }
+          <Switch>
+            <Route path="/" exact component={Home} />
+            <Route path="/therapy" exact component={Therapy} />
+            <Route path="/mezuzot" exact component={Mezuzot} />
+          </Switch>
+          {winWidth === 'desktop' ?
+            <Footer />
+            :
+            <FooterMobile />
+          }
+        </Router>
+      </Context.Provider>
     </div>
   );
 }

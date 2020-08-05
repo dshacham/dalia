@@ -1,0 +1,109 @@
+@import 'index';
+
+.therapy {
+    margin: 10rem auto;
+    width: 100%;
+
+    .buttons {
+        display: flex;
+        justify-content: center;
+
+        button {
+            padding: 1vw 3vw;
+            margin: 0 -1vw;
+            color: $indigo;
+            background-color: rgb(24, 160, 223);
+            border: 1px solid rgba(0, 13, 87, 0.205);
+            // border-radius: 0.1rem;
+            clip-path: $tilted;
+            // box-shadow: inset 1px 1px 5px rgba(34, 47, 66, 0.651);
+            box-shadow: inset 1px 1px 5px rgba(210, 228, 255, 0.651);
+            cursor: pointer;
+        }
+        button:focus {
+            outline: 0;
+        }
+
+        .selected {
+            font-weight: bolder;
+        }
+    }
+
+    .therapy-content {
+        width: 60%;
+        height: fit-content;
+        margin: 2rem auto;
+        line-height: 1.25;
+        
+        li {
+            margin: 0.5rem 0;
+        }
+        .therapy-card {
+            display: flex;
+            flex-direction: column;
+            width: 100%;
+            height: fit-content;
+            box-shadow: inset 1px 1px 3px rgb(255, 255, 255);
+            padding: 1rem 2rem 2rem;
+            text-align: justify;
+            color: $indigo;
+            background-color: $mid-light-blue;
+            border-radius: 0.1rem;
+            opacity: 0;
+            animation: appear .5s ease-in forwards;
+
+            .therapy-title {
+                font-size: 1.5rem;
+                direction: ltr;
+                text-align: right;
+                font-weight: bold;
+            }
+
+            .therapy-img {
+                width: fit-content;
+                box-shadow: 1px 1px 10px rgb(255, 255, 255);
+                img {
+                    border-radius: 0.1rem;
+                    display: block;
+                }
+            }
+            
+            .therapy-adv {
+                .adv-ul {
+                    li:first-of-type {
+                        font-weight: bold;
+                    }
+                }
+            }
+
+            .therapy-desc2 {
+                .desc2-ul {
+                    li:first-of-type, li:last-of-type {
+                        font-weight: bold;
+                    }
+                }
+            }
+        }
+    }
+
+    @keyframes appear {
+        100% {opacity: 1;}
+    }
+}
+
+@media screen and (max-width: 1023px) {
+    .therapy {
+        .buttons {
+        display: flex;
+        justify-content: center;
+
+            button {
+                padding: 2vw 4vw;
+                margin: 0;
+            }
+        }
+        .therapy-content {
+            width: 90%;
+        }
+    }
+}
