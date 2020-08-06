@@ -14,7 +14,7 @@ const FooterMobile = () => {
         <div className="footer">
             <ul className="contact">
                 <li>
-                    <a href="https://www.facebook.com/dalia.shacham" target="_blank">
+                    <a href="https://www.facebook.com/dalia.shacham" target="_blank" rel="noopener noreferrer">
                         <FontAwesomeIcon className="icon" title="פייסבוק" icon={faFacebookSquare} />
                     </a>
                     <p className="icon-desc">פייסבוק</p>

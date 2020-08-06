@@ -1,13 +1,14 @@
-import React, { useState } from 'react';
+import React, { useEffect, useContext } from 'react';
 import '../style/Therapy.scss';
 import TherapyData from '../assets/TherapyAPI';
+import Context from './Context';
 
 const Therapy = () => {
-    const [therapy, setTherapy] = useState('');
+    const { therapy, handleClick } = useContext(Context);
 
-    const handleClick = (id) => {
-        setTherapy(id);
-    }
+    useEffect(() => {
+        window.scrollTo(0, 0);
+    }, []);
 
     return (
         <div className="therapy">

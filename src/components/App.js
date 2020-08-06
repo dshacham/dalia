@@ -13,6 +13,7 @@ function App() {
   const [winWidth, setWinWidth] = useState('');
   const [navClass, setNavClass] = useState('/');
   const [therapyClass, setTherapyClass] = useState('');
+  const [therapy, setTherapy] = useState('');
 
   useEffect(() => {
     window.scrollTo(0, 0);
@@ -29,9 +30,13 @@ function App() {
       setWinWidth('mobile')
   }, []);
 
+  const handleClick = (id) => {
+    setTherapy(id);
+  }
+
   return (
     <div className="App">
-      <Context.Provider value={{ navClass, setNavClass, therapyClass, setTherapyClass }}>
+      <Context.Provider value={{ navClass, setNavClass, therapyClass, setTherapyClass, therapy, setTherapy, handleClick }}>
         <Router>
           {winWidth === 'desktop' ?
             <NavBar />

@@ -48,14 +48,6 @@ export default [
         descName: "rose"
     },
     {
-        img: "../../assets/images/mezuzot/11.jpg",
-        name: "רוזקוורץ + קרנליאן",
-    },
-    {
-        img: "../../assets/images/mezuzot/9.jpg",
-        name: "אבנים שונות",
-    },
-    {
         img: "../../assets/images/mezuzot/10.jpg",
         name: "רוזקוורץ עם פס כסף",
         desc: "../../assets/images/mezuzot/rose.png",
@@ -66,5 +58,13 @@ export default [
         name: "רוזקוורץ + אבנים שונות",
         desc: "../../assets/images/mezuzot/rose.png",
         descName: "mixRose"
+    },
+    {
+        img: "../../assets/images/mezuzot/11.jpg",
+        name: "רוזקוורץ + קרנליאן",
+    },
+    {
+        img: "../../assets/images/mezuzot/9.jpg",
+        name: "אבנים שונות",
     },
 ]

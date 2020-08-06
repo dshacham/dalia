@@ -1,11 +1,10 @@
-import React, { useEffect } from 'react';
+import React, { useContext } from 'react';
 import { Link } from 'react-router-dom';
 import '../style/Home.scss';
+import Context from './Context';
 
 const Home = () => {
-    // useEffect(() => {
-    //     window.scrollTo(0, 0);
-    // }, []);
+    const { handleClick, setNavClass } = useContext(Context);
 
     return (
         <div className="home">
@@ -26,21 +25,21 @@ const Home = () => {
                 <p style={{ textIndent: "1.5rem" }}>במשך השנים למדתי עוד שיטות ריפוי רבות לגוף/נפש, כגון: פירמידות האור, אנרגיית הסוסים, שיטת אלפא, אומגה... עם רוב הכלים אני משתמשת עד היום בחיי ובקליניקה שלי.</p>
             </div>
             <div className="boxes">
-                <Link to="access-bars">
+                <Link to="therapy" onClick={() => handleClick("AccessBars")}>
                     <ul className="therapy-card">
                         <li className="title-he">אקסס בארס</li>
                         <li className="title-en">Access Bars®</li>
                         <li className="desc">הבארס היא שיטת טיפול המתבצעת דרך מגע עדין ב-32 נקודות בראש, ללא מאמץ ובקלות. התהליך משחרר מחסומים שעד כה לא איפשרו לך ליצור את מה שרצית. הנקודות מאכסנות מטען אלקטרו מגנטי המורכב מאמונות חוסמות ומעכבות, דעות, רגשות, זכרונות, דפוסי חשיבה ועוד. <span style={{ textDecoration: "underline" }}>[המשך]</span></li>
                     </ul>
                 </Link>
-                <Link to="theta-healing">
+                <Link to="therapy" onClick={() => handleClick("ThetaHealing")}>
                     <ul className="therapy-card">
                         <li className="title-he">תטא הילינג</li>
                         <li className="title-en">Theta Healing®</li>
                         <li className="desc">תטא הילינג היא שיטה רבת עוצמה לריפוי והגשמה. פותחת את הדלת לעולם טהור, אמת גבוהה, ניסים ואושר. גלי התטא במוח הינם גלים חשמליים שהתדר שלהם איטי במיוחד. גלים אלו מאפיינים אותנו בזמן שינה עמוקה או מדיטציה עמוקה. כשאנו שוהים בגלי התטא  הדרך למרחב תת המודע נפתחת בפנינו ומידע רב מתת המודע הופך נגיש. <span style={{ textDecoration: "underline" }}>[המשך]</span></li>
                     </ul>
                 </Link>
-                <Link to="tarot-cards">
+                <Link to="therapy" onClick={() => handleClick("TarotCards")}>
                     <ul className="therapy-card">
                         <li className="title-he">קלפי טארוט</li>
                         <li className="title-en">Tarot Cards</li>
