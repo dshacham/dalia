@@ -3,37 +3,131 @@
 .tihur {
     color: $indigo;
     margin: 10rem auto;
-    width: 85%;
+    width: 90%;
     text-align: justify;
 
     h2 {
-        margin-bottom: 2rem;
-        padding: 0.5rem 0.2rem;
+        margin: 0 auto 2rem;
+        padding: 0.5rem;
+        width: fit-content;
         text-align: center;
-        background-color: rgb(191, 216, 255);
-        border-radius: 30%;
-        box-shadow: 1px 1px 10px rgba(54, 55, 70, 0.644);
+        background-color: rgb(199, 221, 255);
+        border-radius: 0.2rem;
+        box-shadow: 1px 1px 10px rgba(54, 55, 70, 0.397);
         text-shadow: 1px 1px 10px rgb(255, 255, 255);
     }
+    
+    .tihur-body {
+        display: flex;
+        justify-content: space-between;
+        width: 100%;
+    
+        .tihur-text {
+            width: 70%;
+            // margin: 0 auto;
+    
+            ul, ol {
+                margin: 2rem 1rem;
+                li {
+                    margin: 0.5rem 0;
+                }
+            }
+    
+            p {
+                margin-top: 1rem;
+                line-height: 1.3;
+            }
 
-    .tihur-text {
-        width: 70%;
-        margin-right: 4rem;
+            h4 {
+                margin-top: 2rem;
+                font-weight: 300;
+                font-size: 1.3rem;
 
-        ul, ol {
-            margin: 1rem;
-            li {
-                margin: 0.5rem 0;
+                a {
+                    font-weight: bold;
+                    text-decoration: underline;
+                    color: $indigo;
+                }
             }
         }
+    
+        .tihur-imgs {
+            display: flex;
+            flex-direction: column;
+            margin: 1rem 2rem 0 0;
+            width: 30%;
 
-        p {
-            margin-top: 1rem;
-            line-height: 1.2;
+            img {
+                width: 100%;
+                border-radius: 0.2rem;
+                box-shadow: 1px 1px 5px rgb(34, 47, 66);
+            }
+
+            img:last-of-type {
+                margin-top: 9rem;
+            }
         }
     }
+}
 
-    img {
-        width: 50%;
+@media screen and (max-width: 768px) {
+    .tihur {
+        .tihur-body {
+            display: flex;
+            flex-direction: column;
+
+            .tihur-text {
+                width: 100%;
+                margin: 0;
+            }
+
+            .tihur-imgs {
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                width: 100%;
+                margin: 2rem 1rem;
+
+                img {
+                    margin: 1rem;
+                    width: 90%;
+                }
+
+                img:last-of-type {
+                    margin-top: 0;
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 1024px) and (min-width: 769px) {
+    .tihur {
+        .tihur-body {
+            display: flex;
+            flex-direction: column;
+
+            .tihur-text {
+                width: 100%;
+                margin: 0;
+            }
+
+            .tihur-imgs {
+                flex-direction: row;
+                justify-content: center;
+                align-items: center;
+                width: 100%;
+                margin: 2rem 1rem;
+
+                img {
+                    margin: 1rem;
+                    width: 40%;
+                }
+
+                img:last-of-type {
+                    margin-top: 0;
+                }
+            }
+        }
     }
 }
