@@ -1,0 +1,39 @@
+@import 'index';
+
+.tihur {
+    color: $indigo;
+    margin: 10rem auto;
+    width: 85%;
+    text-align: justify;
+
+    h2 {
+        margin-bottom: 2rem;
+        padding: 0.5rem 0.2rem;
+        text-align: center;
+        background-color: rgb(191, 216, 255);
+        border-radius: 30%;
+        box-shadow: 1px 1px 10px rgba(54, 55, 70, 0.644);
+        text-shadow: 1px 1px 10px rgb(255, 255, 255);
+    }
+
+    .tihur-text {
+        width: 70%;
+        margin-right: 4rem;
+
+        ul, ol {
+            margin: 1rem;
+            li {
+                margin: 0.5rem 0;
+            }
+        }
+
+        p {
+            margin-top: 1rem;
+            line-height: 1.2;
+        }
+    }
+
+    img {
+        width: 50%;
+    }
+}

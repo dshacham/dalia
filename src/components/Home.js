@@ -4,7 +4,7 @@ import '../style/Home.scss';
 import Context from './Context';
 
 const Home = () => {
-    const { handleClick, setNavClass } = useContext(Context);
+    const { handleClick } = useContext(Context);
 
     return (
         <div className="home">

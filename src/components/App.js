@@ -8,6 +8,7 @@ import FooterMobile from './FooterMobile';
 import Context from './Context';
 import Therapy from './Therapy';
 import Mezuzot from './Mezuzot';
+import Tihur from './Tihur';
 
 function App() {
   const [winWidth, setWinWidth] = useState('');
@@ -47,6 +48,7 @@ function App() {
             <Route path="/" exact component={Home} />
             <Route path="/therapy" exact component={Therapy} />
             <Route path="/mezuzot" exact component={Mezuzot} />
+            <Route path="/tihur" exact component={Tihur} />
           </Switch>
           {winWidth === 'desktop' ?
             <Footer />

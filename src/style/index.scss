@@ -19,7 +19,6 @@ $tilted: polygon(25% 0%, 100% 0%, 75% 100%, 0% 100%);
     padding: 0;
     box-sizing: border-box;
     scroll-behavior: smooth;
-    list-style: none;
     direction: rtl;
 }
 
@@ -38,4 +37,8 @@ body {
 a {
     text-decoration: none;
     cursor: pointer;
+}
+
+ul {
+    list-style: none;
 }
