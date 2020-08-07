@@ -113,3 +113,19 @@
         }
     }
 }
+
+@media screen and (max-width: 768px) {
+    .mezuzot {
+        margin: 6rem 2rem;
+
+        .mezuzot-text {
+            margin: 0 auto;
+        }
+
+        .mezuzot-container {
+            .ul-mezuzot {
+                width: 20rem;
+            }
+        }
+    }
+}
