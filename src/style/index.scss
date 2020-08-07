@@ -1,7 +1,7 @@
 /* COLORS */
 $light-blue: rgb(214, 230, 255);
 $mid-light-blue: rgb(135, 183, 255);
-$turquoise: rgb(24, 199, 223);
+$turquoise: rgb(24, 190, 223);
 $dark-blue: rgb(0, 13, 87);
 $indigo: rgb(0, 21, 139);
 
@@ -23,6 +23,7 @@ $tilted: polygon(25% 0%, 100% 0%, 75% 100%, 0% 100%);
 }
 
 html {
+    width: 100%;
     height: 100%;
 }
 

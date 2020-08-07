@@ -26,7 +26,7 @@ const SlideInNav = () => {
                     color='#00158b'
                     strokeWidth={3}
                 />
-                <Link to="/"><img src="../../assets/images/logo7.png" alt="logo" className="logo" /></Link>
+                <Link to="/"><img src="../../assets/images/logo.png" alt="logo" className="logo" /></Link>
             </div>
             <nav className="slide-in">
                 {initClosed ? null

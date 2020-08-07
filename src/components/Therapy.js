@@ -13,29 +13,29 @@ const Therapy = () => {
     return (
         <div className="therapy">
             <div className="buttons">
-                <button
+                <button id="AccessBars"
                     onClick={() => handleClick("AccessBars")}
-                    className={therapy === "AccessBars" ? "selected" : ""}>אקסס בארס
+                    className={therapy === "AccessBars" ? "button selected" : "button"}>אקסס בארס
                     
                 </button>
-                <button
+                <button id="ThetaHealing"
                     onClick={() => handleClick("ThetaHealing")}
-                    className={therapy === "ThetaHealing" ? "selected" : ""}
+                    className={therapy === "ThetaHealing" ? "button selected" : "button"}
                     >תטא הילינג
                 </button>
-                <button
+                <button id="TarotCards"
                     onClick={() => handleClick("TarotCards")}
-                    className={therapy === "TarotCards" ? "selected" : ""}
+                    className={therapy === "TarotCards" ? "button selected" : "button"}
                     >קלפי טארוט
                 </button>
-                <button
+                <button id="BachFlowers"
                     onClick={() => handleClick("BachFlowers")}
-                    className={therapy === "BachFlowers" ? "selected" : ""}
+                    className={therapy === "BachFlowers" ? "button selected" : "button"}
                     >פרחי באך
                 </button>
-                <button
+                <button id="Crystals"
                     onClick={() => handleClick("Crystals")}
-                    className={therapy === "Crystals" ? "selected" : ""}
+                    className={therapy === "Crystals" ? "button selected" : "button"}
                     >אבני קריסטל
                 </button>
             </div>

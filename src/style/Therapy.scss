@@ -7,16 +7,24 @@
     .buttons {
         display: flex;
         justify-content: center;
-
-        button {
-            padding: 1vw 3vw;
-            margin: 0 -1vw;
+        margin: 0 auto;
+        width: fit-content;
+        box-shadow: 1px 1px 3px rgba(88, 88, 88, 0.918);
+        
+        .button {
+            padding: 3vh 3vw;
             color: $indigo;
             background-color: rgb(24, 160, 223);
-            border: 1px solid rgba(0, 13, 87, 0.205);
-            clip-path: $tilted;
-            box-shadow: inset 1px 1px 5px rgba(210, 228, 255, 0.651);
+            border: none;
             cursor: pointer;
+        }
+        .button:first-of-type {
+            border-top-right-radius: 0.2rem;
+            border-bottom-right-radius: 0.2rem;
+        }
+        .button:last-of-type {
+            border-top-left-radius: 0.2rem;
+            border-bottom-left-radius: 0.2rem;
         }
         button:focus {
             outline: 0;
@@ -25,6 +33,12 @@
         .selected {
             font-weight: bolder;
         }
+
+        #AccessBars { background-color: rgb(25, 160, 225); }
+        #ThetaHealing { background-color: rgb(30, 165, 230); }
+        #TarotCards { background-color: rgb(35, 170, 235); }
+        #BachFlowers { background-color: rgb(40, 175, 240); }
+        #Crystals { background-color: rgb(45, 180, 245); }
     }
 
     .therapy-content {
@@ -63,6 +77,7 @@
                 img {
                     border-radius: 0.1rem;
                     display: block;
+                    max-width: 100%;
                 }
             }
             
@@ -89,17 +104,31 @@
     }
 }
 
-@media screen and (max-width: 1023px) {
+@media screen and (max-width: 449px) {
     .therapy {
         .buttons {
-        display: flex;
-        justify-content: center;
+            margin: 0 0.5rem;
+        }
+    }
+}
 
-            button {
-                padding: 2vw 4vw;
-                margin: 0;
+@media screen and (max-width: 768px) {
+    .therapy {
+        margin: 6.5rem auto;
+        
+        .therapy-content {
+            .therapy-card {
+                .therapy-title {
+                    font-size: 5.5vw;
+                    text-align: center;
+                }
             }
         }
+    }
+}
+
+@media screen and (max-width: 1024px) {
+    .therapy {
         .therapy-content {
             width: 90%;
         }

@@ -12,12 +12,11 @@
     
     ul {
         display: flex;
-        justify-content: space-between;
+        justify-content: center;
         align-items: center;
-        padding: 0;
         
         li {
-            margin: 0 5.5vw;
+            margin: 0 4.5vw;
             flex-direction: column;
             cursor: pointer;
             align-items: center;
@@ -33,6 +32,30 @@
                 margin-top: 0.2rem;
                 font-weight: 300;
                 text-align: center;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 329px) {
+    .footer {
+        ul {
+            li {
+                margin: 0 3vw;
+
+                .icon {
+                    font-size: 2rem;
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 365px) and (min-width: 330px) {
+    .footer {
+        ul {
+            li {
+                margin: 0 4vw;
             }
         }
     }
