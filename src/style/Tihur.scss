@@ -37,6 +37,14 @@
                 margin-top: 1rem;
                 line-height: 1.3;
             }
+            p:last-of-type {
+                background-color: rgb(199, 221, 255);
+                padding: 1rem;
+                margin: 2rem;
+                border-radius: 0.2rem;
+                box-shadow: 1px 1px 10px rgba(54, 55, 70, 0.397);
+                line-height: 1.4;
+            }
 
             h4 {
                 margin-top: 2rem;
@@ -72,9 +80,11 @@
 
 @media screen and (max-width: 768px) {
     .tihur {
+        margin: 6.5rem auto;
         .tihur-body {
             display: flex;
             flex-direction: column;
+            align-items: center;
 
             .tihur-text {
                 width: 100%;
@@ -89,8 +99,9 @@
                 margin: 2rem 1rem;
 
                 img {
-                    margin: 1rem;
+                    margin: 1rem auto;
                     width: 90%;
+                    display: block;
                 }
 
                 img:last-of-type {

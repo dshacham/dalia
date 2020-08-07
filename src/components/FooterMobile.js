@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 import '../style/FooterMobile.scss';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faEnvelope, faEnvelopeOpenText, faAngleDoubleUp } from '@fortawesome/free-solid-svg-icons';
-import { faFacebookSquare } from '@fortawesome/free-brands-svg-icons';
+import { faFacebookSquare, faWhatsapp } from '@fortawesome/free-brands-svg-icons';
 
 const FooterMobile = () => {
     const scrollTop = () => {
@@ -14,10 +14,16 @@ const FooterMobile = () => {
         <div className="footer">
             <ul className="contact">
                 <li>
-                    <a href="https://www.facebook.com/dalia.shacham" target="_blank" rel="noopener noreferrer">
+                    <a href="https://www.facebook.com/daliatheta?ref=br_tf" target="_blank" rel="noopener noreferrer">
                         <FontAwesomeIcon className="icon" title="פייסבוק" icon={faFacebookSquare} />
                     </a>
                     <p className="icon-desc">פייסבוק</p>
+                </li>
+                <li>
+                    <a href="https://wa.me/972522480312">
+                        <FontAwesomeIcon className="icon" title="וואטסאפ" icon={faWhatsapp} />
+                    </a>
+                    <p className="icon-desc">וואטסאפ</p>
                 </li>
                 <li>
                     <a href="mailto: dool52@walla.com">
