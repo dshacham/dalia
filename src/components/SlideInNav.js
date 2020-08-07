@@ -34,19 +34,19 @@ const SlideInNav = () => {
                     isMenuClicked ?
                         <ul className={isMenuOpen ? "ul-slide slide-in-anim" : null}>
                             <li id="home">
-                                <NavLink to="/">ראשי</NavLink>
+                                <NavLink onClick={handleMenuClick} to="/">ראשי</NavLink>
                             </li>
                             <li id="therapy">
-                                <NavLink to="therapy">טיפולים</NavLink>
+                                <NavLink onClick={handleMenuClick} to="therapy">טיפולים</NavLink>
                             </li>
-                            <li id="purification">
-                                <NavLink to="purification">טיהור בית</NavLink>
+                            <li id="tihur">
+                                <NavLink onClick={handleMenuClick} to="tihur">טיהור בית</NavLink>
                             </li>
                             <li id="mezuzot">
-                                <NavLink to="mezuzot">בתי מזוזה</NavLink>
+                                <NavLink onClick={handleMenuClick} to="mezuzot">בתי מזוזה</NavLink>
                             </li>
                             <li id="contact">
-                                <NavLink to="contact">יצירת קשר</NavLink>
+                                <NavLink onClick={handleMenuClick} to="contact">יצירת קשר</NavLink>
                             </li>
                         </ul>
                         :
@@ -57,8 +57,8 @@ const SlideInNav = () => {
                             <li id="therapy">
                                 <NavLink to="therapy">טיפולים</NavLink>
                             </li>
-                            <li id="purification">
-                                <NavLink to="purification">טיהור בית</NavLink>
+                            <li id="tihur">
+                                <NavLink to="tihur">טיהור בית</NavLink>
                             </li>
                             <li id="mezuzot">
                                 <NavLink to="mezuzot">בתי מזוזה</NavLink>
