@@ -1,9 +1,12 @@
-import React, { useState } from 'react';
+import React, { useState, useContext } from 'react';
 import { NavLink, Link } from 'react-router-dom';
 import HamburgerMenu from 'react-hamburger-menu';
 import '../style/SlideInNav.scss';
+import Context from './Context';
 
 const SlideInNav = () => {
+    const { setTherapy } = useContext(Context);
+
     const [isMenuOpen, setIsMenuOpen] = useState(false); // hamburger
     const [isMenuClicked, setIsMenuClicked] = useState(false);
     const [isMenuClosed, setIsMenuClosed] = useState(true);
@@ -34,19 +37,19 @@ const SlideInNav = () => {
                     isMenuClicked ?
                         <ul className={isMenuOpen ? "ul-slide slide-in-anim" : null}>
                             <li id="home">
-                                <NavLink onClick={handleMenuClick} to="/">ראשי</NavLink>
+                                <NavLink onClick={() => {handleMenuClick(); setTherapy("")}} to="/">ראשי</NavLink>
                             </li>
                             <li id="therapy">
-                                <NavLink onClick={handleMenuClick} to="therapy">טיפולים</NavLink>
+                                <NavLink onClick={() => {handleMenuClick(); setTherapy("")}} to="therapy">טיפולים</NavLink>
                             </li>
                             <li id="tihur">
-                                <NavLink onClick={handleMenuClick} to="tihur">טיהור בית</NavLink>
+                                <NavLink onClick={() => {handleMenuClick(); setTherapy("")}} to="tihur">טיהור בית</NavLink>
                             </li>
                             <li id="mezuzot">
-                                <NavLink onClick={handleMenuClick} to="mezuzot">בתי מזוזה</NavLink>
+                                <NavLink onClick={() => {handleMenuClick(); setTherapy("")}} to="mezuzot">בתי מזוזה</NavLink>
                             </li>
                             <li id="contact">
-                                <NavLink onClick={handleMenuClick} to="contact">יצירת קשר</NavLink>
+                                <NavLink onClick={() => {handleMenuClick(); setTherapy("")}} to="contact">יצירת קשר</NavLink>
                             </li>
                         </ul>
                         :
