@@ -2,7 +2,7 @@ import React, { useContext } from 'react';
 import { Link } from 'react-router-dom';
 import '../style/Footer.scss';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faEnvelope, faEnvelopeOpenText } from '@fortawesome/free-solid-svg-icons';
+import { faEnvelope, faEnvelopeOpenText, faPhoneSquare } from '@fortawesome/free-solid-svg-icons';
 import { faFacebookSquare } from '@fortawesome/free-brands-svg-icons';
 import Context from './Context';
 
@@ -37,17 +37,35 @@ const Footer = () => {
                 <li className="section-contact-desk">
                     <Link to="contact" onClick={() => setNavClass("/contact")}>יצירת קשר</Link>
                 </li>
-                <li><a href="https://www.facebook.com/dalia.shacham" target="_blank" rel="noopener noreferrer">
+                <li>
+                    <a href="https://www.facebook.com/dalia.shacham" target="_blank" rel="noopener noreferrer">
                     <FontAwesomeIcon className="icon-desk" title="פייסבוק" icon={faFacebookSquare} />
-                </a><p>פייסבוק</p></li>
-                <li><a href="mailto: dool52@walla.com">
+                    </a>
+                    <p>פייסבוק</p>
+                </li>
+                <li>
+                    <a href="mailto: dool52@walla.com">
                     <FontAwesomeIcon className="icon-desk" title="אימייל" icon={faEnvelope} />
-                </a><p>אימייל</p></li>
+                    </a>
+                    <p>אימייל</p>
+                </li>
+                <li>
+                    <FontAwesomeIcon className="icon-desk" title="נייד" icon={faPhoneSquare} />
+                    <p className="icon-desc">0522480312</p>
+                </li>
                 <li>
                     <Link to="contact" onClick={() => setNavClass("/contact")}>
                         <FontAwesomeIcon className="icon-desk" title="טופס שליחת הודעה" icon={faEnvelopeOpenText} />
                     </Link>
                     <p>הודעה</p>
+                </li>
+            </ul>
+            <ul className="footer-section-desk credits">
+                <li className="credit1">
+                ©2020 דליה שחם - האור שבלב
+                </li>
+                <li className="credit2">
+                    <a href="http://ds-portfolio.herokuapp.com/" target="_blank" rel="noopener noreferrer">האתר נבנה ע"י דנה שחם</a>
                 </li>
             </ul>
         </div>

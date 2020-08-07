@@ -9,6 +9,7 @@ import Context from './Context';
 import Therapy from './Therapy';
 import Mezuzot from './Mezuzot';
 import Tihur from './Tihur';
+import Contact from './Contact';
 
 function App() {
   const [winWidth, setWinWidth] = useState('');
@@ -37,7 +38,7 @@ function App() {
 
   return (
     <div className="App">
-      <Context.Provider value={{ navClass, setNavClass, therapyClass, setTherapyClass, therapy, setTherapy, handleClick }}>
+      <Context.Provider value={{ navClass, setNavClass, therapyClass, setTherapyClass, therapy, setTherapy, handleClick, winWidth }}>
         <Router>
           {winWidth === 'desktop' ?
             <NavBar />
@@ -49,6 +50,7 @@ function App() {
             <Route path="/therapy" exact component={Therapy} />
             <Route path="/mezuzot" exact component={Mezuzot} />
             <Route path="/tihur" exact component={Tihur} />
+            <Route path="/contact" exact component={Contact} />
           </Switch>
           {winWidth === 'desktop' ?
             <Footer />

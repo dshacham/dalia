@@ -10,12 +10,12 @@
     color: $mid-light-blue;
     padding: 1rem 0;
     
-    ul {
+    .mobile-contact {
         display: flex;
         justify-content: center;
         align-items: center;
         
-        li {
+        .li-mobile-footer {
             margin: 0 4.5vw;
             flex-direction: column;
             cursor: pointer;
@@ -35,12 +35,33 @@
             }
         }
     }
+
+    .mobile-credits {
+        display: flex;
+        justify-content: center;
+        margin-top: 2.5rem;
+        font-size: 0.7rem;
+        
+        .credit1 {
+            border-left: 1px solid $mid-light-blue;
+            padding-left: 0.5rem;
+        }
+        .credit2 {
+            padding-right: 0.5rem;
+        }
+
+        a {
+            color: $mid-light-blue;
+            font-size: 0.7rem;
+            text-decoration: underline;
+        }
+    }
 }
 
 @media screen and (max-width: 329px) {
     .footer {
-        ul {
-            li {
+        .mobile-contact {
+            .li-mobile-footer {
                 margin: 0 3vw;
 
                 .icon {
@@ -53,8 +74,8 @@
 
 @media screen and (max-width: 365px) and (min-width: 330px) {
     .footer {
-        ul {
-            li {
+        .mobile-contact {
+            .li-mobile-footer {
                 margin: 0 4vw;
             }
         }

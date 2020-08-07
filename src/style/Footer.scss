@@ -16,11 +16,11 @@
         border-left: 1px solid $mid-light-blue;
         border-left-style: dotted;
         text-align: center;
-        padding: 0 8vw;
+        padding: 0 5vw;
         display: flex;
         flex-direction: column;
 
-        li:first-of-type {
+        .section-title-desk, .section-contact-desk {
             font-size: 0.8rem;
             font-weight: bold;
         }
@@ -34,7 +34,23 @@
         .icon-desk {
             font-size: 1.25rem;
         }
+
+        .credit1 {
+            font-size: 0.9rem;
+        }
+
+        .credit2 {
+            a {
+                text-decoration: underline;
+            }
+        }
     }
+
+    .credits {
+        align-items: center;
+        justify-content: space-between;
+    }
+
     .footer-section-desk:last-of-type {
         border-left: hidden;
         li {
@@ -51,23 +67,11 @@
 
     
 }
-// display: flex;
-// justify-content: space-around;
-// align-items: center;
 
-// button {
-//     cursor: pointer;
-//     font-size: 3rem;
-//     font-weight: 300;
-//     color: rgb(151, 151, 151);
-//     border: hidden;
-//     background-color: rgb(230, 230, 230);
-// }
-
-// button:hover {
-//     text-shadow: 2px 2px $yellow;
-// }
-
-// button:focus {
-//     outline: 0;
-// }
+@media screen and (max-width: 850px) {
+    .footer-desk {
+        .footer-section-desk {
+            padding: 0 4vw;
+        }
+    }
+}
